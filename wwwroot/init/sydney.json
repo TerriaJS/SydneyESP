@@ -1,0 +1,50 @@
+{
+  "catalog": [ {
+    "name": "City of Sydney Environmental Sustainability",
+    "type": "group",
+    "isOpen": "true",
+    "items": [ { 
+      "name": "Precincts",
+      "type": "open-street-map",
+      "url" : "http://guru.cycletour.org/tile/Sydney-ESP",
+      "enabled": true,
+      "isShown": true
+    },
+    {
+      "name": "Residential electricity",
+      "type": "csv",
+      "url": "data/electricity-tweaked.csv"
+    },
+    {
+      "name": "Precinct region mapping demonstration",
+      "type": "csv",
+      "url": "data/precincts-test.csv"
+    },
+    {
+      "blacklist": {
+        "Rainforests (EVC_2005)": true
+      },
+      "groupBy": "organization",
+      "minimumMaxScaleDenominator": 10000000000,
+      "filterByWmsGetCapabilities": false,
+      "filterQuery": [
+        "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aaus-geo-csv)"
+      ],
+      "url": "http://54.79.65.189",
+      "type": "ckan",
+      "name": "CKAN",
+      "includeCsv": true
+    }
+
+
+    ]
+  }],
+  "homeCamera": {
+    "west": 151.1571,
+    "east": 151.2533,
+    "north": -33.8456,
+    "south": -33.9314
+  },
+  "baseMapName": "Positron (Light)"
+
+}
