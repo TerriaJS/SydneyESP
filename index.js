@@ -101,7 +101,7 @@ registerCatalogMembers();
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria({
-    appName: 'Environment and Sustainability Portal',
+    appName: 'Environmental Sustainability Explorer',
     supportEmail: 'steve.bennett@nicta.com.au',
     baseUrl: configuration.terriaBaseUrl,
     cesiumBaseUrl: configuration.cesiumBaseUrl,
@@ -165,7 +165,7 @@ terria.start({
         elements: [
             '<a target="_blank" href="about.html">' + 
             '<img src="images/sydney-logo.png" height="50" alt="City of Sydney logo" title="Version: ' + version + '" style="margin-bottom:-4px"/></a>' +
-            '<br/><span class="brand-bar-name" style="font-size:16px">Environment & Sustainability Portal</span>',
+            '<br/><span class="brand-bar-name" style="font-size:16px">Environmental Sustainability Explorer</span>',
             ''
         ]
     });
