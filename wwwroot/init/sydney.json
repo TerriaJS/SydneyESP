@@ -28,12 +28,14 @@
       "minimumMaxScaleDenominator": 10000000000,
       "filterByWmsGetCapabilities": false,
       "filterQuery": [
-        "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aaus-geo-csv)"
+        "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aaus-geo-csv%20OR%20res_format%3aGeoJSON)"
       ],
-      "url": "http://54.79.65.189",
+      "url": "http://52.64.181.73:5000",
       "type": "ckan",
-      "name": "CKAN",
-      "includeCsv": true
+      "name": "Environmental Sustainability Portal",
+      "includeCsv": true,
+      "includeGeoJson": true,
+      "isOpen": true
     }
 
 
