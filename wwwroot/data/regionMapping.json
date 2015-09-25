@@ -6,7 +6,9 @@
             "layerName": "region_map:sydney_precincts",
             "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
             "regionProp": "Name",
-            "aliases": [ "precinct", "sydney_precinct", "sydneyprecinct" ]
+            "aliases": [ "precinct", "sydney_precinct", "sydneyprecinct" ],
+            "serverReplacements": [ [ "[- +&_.,]+", "" ]],
+            "dataReplacements": [ [ "[- +&_.,]+", "" ]]
         },
         "SA1": {
           "description": "Statistical Area Level 1",
