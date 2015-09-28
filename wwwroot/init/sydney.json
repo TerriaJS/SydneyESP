@@ -4,21 +4,11 @@
     "type": "group",
     "isOpen": "true",
     "items": [ { 
-      "name": "Precincts",
+      "name": "Precincts of Sydney",
       "type": "open-street-map",
       "url" : "http://guru.cycletour.org/tile/Sydney-ESP",
       "enabled": true,
       "isShown": true
-    },
-    {
-      "name": "Residential electricity",
-      "type": "csv",
-      "url": "data/electricity-tweaked.csv"
-    },
-    {
-      "name": "Precinct region mapping demonstration",
-      "type": "csv",
-      "url": "data/precincts-test.csv"
     },
     {
       "blacklist": {
