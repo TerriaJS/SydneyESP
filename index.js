@@ -164,7 +164,7 @@ terria.start({
         container: ui,
         elements: [
             '<a target="_blank" href="about.html">' + 
-            '<img src="images/sydney-logo.png" height="50" alt="City of Sydney logo" title="Version: ' + version + '" style="margin-bottom:-4px"/></a>' +
+            '<img src="images/sydney-logo.png" height="50" alt="City of Sydney logo" title="Version: ' + version + '"/></a>' +
             '<br/><span class="brand-bar-name" style="font-size:16px">Environmental Sustainability Explorer</span>',
             ''
         ]

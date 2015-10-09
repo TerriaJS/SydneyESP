@@ -46,3 +46,94 @@ span.cesium-credit-delimiter:nth-child(2) {
 .nationalmap-related-maps-table h2 a {
     color: white;
 }
+
+/* Official City of Sydney colours */
+@our-blue: rgb(21,33,40);
+@2030-green: rgb(122,193,67);
+
+@ocean-blue: rgb(0,90,132);
+@sky-blue: rgb(84, 188, 325);
+@field-green: rgb(193, 216, 47);
+@sunshine-yellow: rgb(253, 187, 48);
+@burnt-orange: rgb(245, 128, 37);
+@dirt-red: rgb(198, 12, 70);
+@city-grey: rgb(136, 126, 110);
+
+.explorer-panel-header {
+    background-color: @ocean-blue; /*@2030-green;*/
+}
+
+
+@font-face {
+    font-family: 'swiss_721light';
+    src: url('/fonts/swiss_721_light-webfont.eot');
+    src: url('/fonts/swiss_721_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/swiss_721_light-webfont.woff2') format('woff2'),
+         url('/fonts/swiss_721_light-webfont.woff') format('woff'),
+         url('/fonts/swiss_721_light-webfont.ttf') format('truetype'),
+         url('/fonts/swiss_721_light-webfont.svg#swiss_721light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+
+.explorer-panel-header {
+    font-family: 'swiss_721light';
+}
+
+.explorer-panel-body {
+    font-family: 'swiss_721light' !important;
+}
+
+.data-catalog-item-label {
+    font-family: 'swiss_721light' !important;
+}
+
+/* Green item with checkmark instead of blue */
+
+.data-catalog-enabled-item { 
+    color: @2030-green;
+    fill: @2030-green;
+}
+
+.data-catalog-item-checkbox.checked rect {
+    stroke: @2030-green;
+}
+
+.data-catalog-item-checkbox.checked path {
+    fill: @2030-green;
+}
+
+.explorer-panel-body-pane {
+    background-color: @our-blue;
+}
+
+.explorer-panel-tab-badge {
+    background-color: @burnt-orange;
+}
+
+.explorer-panel {
+    top: 100px; /* Make space for logo */
+}
+
+.brand-bar-element-first {
+    padding-left: 8px; /* Trying to line up the tag underneath */
+}
+
+.brand-bar-element-first img {
+    margin: 20px; /* Vaguely inline with the branding guidelines. */
+    margin-bottom:10px;
+}
+
+.brand-bar-main {
+    background-color: @our-blue;
+
+}
+.brand-bar {
+    background-color: @our-blue;
+    height: 100px;   
+}
+
+.data-catalog-top-group-header {
+    background-color: @our-blue;
+}
