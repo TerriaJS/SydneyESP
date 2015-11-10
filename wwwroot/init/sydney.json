@@ -1,36 +1,27 @@
 {
-  "catalog": [ {
-    "name": "Environment & Sustainability",
-    "type": "group",
-    "isOpen": "true",
-    "items": [ { 
-      "name": "Precincts of Sydney",
-      "type": "open-street-map",
-      "url" : "http://guru.cycletour.org/tile/Sydney-ESP",
-      "enabled": true,
-      "isShown": true
-    },
-    {
-      "blacklist": {
-        "Rainforests (EVC_2005)": true
-      },
-      "groupBy": "organization",
-      "minimumMaxScaleDenominator": 10000000000,
-      "filterByWmsGetCapabilities": false,
-      "filterQuery": [
-        "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aaus-geo-csv%20OR%20res_format%3aGeoJSON)"
-      ],
-      "url": "http://52.64.181.73",
-      "type": "ckan",
-      "name": "Environmental Sustainability Portal",
-      "includeCsv": true,
-      "includeGeoJson": true,
-      "isOpen": true
-    }
-
-
-    ]
-  }],
+  "catalog": [ 
+        {
+          "type": "ckan",
+          "name": "Environmental Sustainability Portal",
+          "blacklist": {
+            "Rainforests (EVC_2005)": true
+          },
+          "groupBy": "organization",
+          "minimumMaxScaleDenominator": 10000000000,
+          "filterByWmsGetCapabilities": false,
+          "filterQuery": [
+            "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aaus-geo-csv%20OR%20res_format%3aGeoJSON%20OR%20res_format%3aCZML)"
+          ],
+          "url": "http://52.64.181.73",
+          "includeCsv": true,
+          "includeGeoJson": true,
+          "includeCzml": true,
+          "isOpen": true,
+          "itemProperties": {
+            "isOpen": true
+          }
+        }
+  ],
   "homeCamera": {
     "west": 151.1571,
     "east": 151.2533,
