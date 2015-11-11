@@ -205,7 +205,7 @@ function watch(name, files, minify) {
         debug: true,
         cache: {},
         packageCache: {}
-    }));
+    }), { poll: 500 } );
 
     function rebundle(ids) {
         // Don't rebundle if only the version changed.
