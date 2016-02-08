@@ -1,11 +1,11 @@
 {
-  "name": "nationalmap",
-  "version": "0.1.0",
-  "description": "Geospatial visualization application for Australian government and open data.",
+  "name": "terria-sydney-esp",
+  "version": "0.2.0",
+  "description": "Terria-based map for City of Sydney's Environmental Sustainability Portal",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/NICTA/nationalmap"
+    "url": "http://github.com/TerriaJS/SydneyESP"
   },
   "dependencies": {
     "compression": "^1.4.3",
