@@ -1,6 +1,6 @@
 {
     "proxyDomains" : [
-        "cos-ckan-dev.terria.io"
+        "cos-ckan-dev.terria.io",
         "nicta.com.au",
         "gov.au",
         "csiro.au",
