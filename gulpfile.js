@@ -9,7 +9,6 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var browserify = require('browserify');
 var jshint = require('gulp-jshint');
-var jsdoc = require('gulp-jsdoc');
 var less = require('gulp-less');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -26,6 +25,8 @@ var appJSName = 'nationalmap.js';
 var appCssName = 'nationalmap.css';
 var specJSName = 'nationalmap-tests.js';
 var appEntryJSName = './index.js';
+var terriaJSSource = 'node_modules/terriajs/wwwroot';
+var terriaJSDest = 'wwwroot/build/TerriaJS';
 var testGlob = './test/**/*.js';
 
 // Create the build directory, because browserify flips out if the directory that might
@@ -67,6 +68,7 @@ gulp.task('release', ['build-css', 'merge-datasources', 'release-app', 'release-
 
 gulp.task('watch-app', ['prepare'], function() {
     return watch(appJSName, appEntryJSName, false);
+    // TODO: make this automatically trigger when ./lib/Views/*.html get updated
 });
 
 gulp.task('watch-specs', ['prepare'], function() {
@@ -74,7 +76,7 @@ gulp.task('watch-specs', ['prepare'], function() {
 });
 
 gulp.task('watch-css', ['build-css'], function() {
-    return gulp.watch(['./index.less', './node_modules/terriajs/lib/Styles/*.less'], ['build-css']);
+    return gulp.watch(['./index.less', './node_modules/terriajs/lib/Styles/*.less', './lib/Styles/*.less'], ['build-css']);
 });
 
 gulp.task('watch-datasource-groups', ['merge-groups'], function() {
@@ -87,8 +89,11 @@ gulp.task('watch-datasource-catalog', ['merge-catalog'], function() {
 
 gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog']);
 
+gulp.task('watch-terriajs', ['prepare-terriajs'], function() {
+    return gulp.watch(terriaJSSource + '/**', [ 'prepare-terriajs' ]);
+});
 
-gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css', 'watch-datasources']);
+gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css', 'watch-datasources', 'watch-terriajs']);
 
 gulp.task('lint', function(){
     return gulp.src(['lib/**/*.js', 'test/**/*.js'])
@@ -97,20 +102,12 @@ gulp.task('lint', function(){
         .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('docs', function(){
-    return gulp.src('lib/**/*.js')
-        .pipe(jsdoc('./wwwroot/doc', undefined, {
-            plugins : ['plugins/markdown']
-        }));
-});
-
 gulp.task('prepare', ['prepare-terriajs']);
 
 gulp.task('prepare-terriajs', function() {
-    return gulp.src([
-            'node_modules/terriajs/wwwroot/**'
-        ], { base: 'node_modules/terriajs/wwwroot' })
-    .pipe(gulp.dest('wwwroot/build/TerriaJS'));
+    return gulp
+        .src([ terriaJSSource + '/**' ], { base: terriaJSSource })
+        .pipe(gulp.dest(terriaJSDest));
 });
 
 gulp.task('merge-groups', function() {
@@ -205,7 +202,7 @@ function watch(name, files, minify) {
         debug: true,
         cache: {},
         packageCache: {}
-    }), { poll: 500 } );
+    }), { poll: 1000 } );
 
     function rebundle(ids) {
         // Don't rebundle if only the version changed.

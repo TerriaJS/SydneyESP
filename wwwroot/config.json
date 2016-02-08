@@ -1,5 +1,6 @@
 {
     "proxyDomains" : [
+        "cos-ckan-dev.terria.io"
         "nicta.com.au",
         "gov.au",
         "csiro.au",
@@ -11,7 +12,9 @@
         "s3-ap-southeast-2.amazonaws.com",
         "adelaidecitycouncil.com",
         "www.dptiapps.com.au",
-        "cos-ckan-dev.terria.io"
+        "geoserver-123.aodn.org.au",
+        "geoserver.imos.org.au",
+        "nci.org.au"
     ],
     "initializationUrls" : [
         "sydney"
@@ -23,7 +26,7 @@
         "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: The NationalMap must not be used for navigation or precise spatial analysis",
-            "url": "About.html"
+            "url": "about.html"
         }
     }
 }
