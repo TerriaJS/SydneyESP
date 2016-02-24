@@ -12,7 +12,7 @@
           "filterQuery": [
             "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aaus-geo-csv%20OR%20res_format%3aGeoJSON%20OR%20res_format%3aCZML%20OR%20res_format%3aczml)"
           ],
-          "url": "http://cos-ckan-dev.terria.io",
+          "url": "/",
           "includeCsv": true,
           "includeGeoJson": true,
           "includeCzml": true,
