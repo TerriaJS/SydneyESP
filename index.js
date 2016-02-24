@@ -205,28 +205,12 @@ terria.start({
                 }
             }),
             new MenuBarItemViewModel({
-                label: 'Related Maps',
-                tooltip: 'View other maps in the NationalMap family.',
+                label: 'Open Data Platform',
+                tooltip: 'City of Sydney Open Data catalogue',
                 svgPath: svgRelated,
                 svgPathWidth: 14,
                 svgPathHeight: 13,
-                callback: function() {
-                    PopupMessageViewModel.open(ui, {
-                        title: 'Related Maps',
-                        message: require('fs').readFileSync(__dirname + '/lib/Views/RelatedMaps.html', 'utf8'),
-                        width: 600,
-                        height: 430
-                    });
-                }
-            }),
-            new MenuBarItemViewModel({
-                label: 'About',
-                tooltip: 'About National Map.',
-                svgPath: svgInfo,
-                svgPathWidth: 18,
-                svgPathHeight: 18,
-                svgFillRule: 'evenodd',
-                href: 'about.html'
+                href: '/'
             })
         ]
     });
