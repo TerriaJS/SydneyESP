@@ -3,12 +3,41 @@
   "regionWmsMap": {
     "PRECINCT": {
         "description": "Precincts of the City of Sydney",
-        "layerName": "region_map:sydney_precincts",
+        "layerName": "region_map:CoS_Village_fid",
         "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "Name",
         "aliases": [ "precinct", "sydney_precinct", "sydneyprecinct" ],
         "serverReplacements": [ [ "[- +&_.,]+", "" ]],
         "dataReplacements": [ [ "[- +&_.,]+", "" ]]
+    },
+    "Sydney_Village_Code": {
+        "description": "Villages of the City of Sydney",
+        "layerName": "region_map:CoS_Village_fid",
+        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "regionProp": "Code",
+        "aliases": [ "sydney_village", "sydney_village_code" ]
+    },
+    "Sydney_Building": {
+        "description": "Villages of the City of Sydney",
+        "layerName": "region_map:CoS_BFPkey_fid",
+        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "regionProp": "BLDGKEY",
+        "aliases": [ "sydney_building", "sydney_building_key" ],
+        "comment": "Truncated with this command: ogr2ogr -f \"ESRI Shapefile\" CoS_BFPkey_fid.shp CoS_BFP_fid.shp -dialect sqlite -sql \"select FID,substr(FLOORKEY,1,8) AS BLDGKEY,* FROM CoS_BFP_fid\""
+    },
+    "Sydney_Building_Floorkey": {
+        "description": "Villages of the City of Sydney",
+        "layerName": "region_map:CoS_BFP_fid",
+        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "regionProp": "FLOORKEY",
+        "aliases": [ "sydney_building_floorkey" ]
+    },
+    "Sydney_Transport_Zone": {
+        "description": "Villages of the City of Sydney",
+        "layerName": "region_map:CoS_TZ_2011_fid",
+        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "regionProp": "TZ_CODE11",
+        "aliases": [ "sydney_transport_zone", "sydney_tz" ]
     },
     "SA1": {
         "layerName": "region_map:FID_SA1_2011_AUST",
