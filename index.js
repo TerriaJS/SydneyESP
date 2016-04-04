@@ -23,14 +23,14 @@
 var version = require('./version');
 
 var terriaOptions = {
-    appName: 'Environmental Sustainability Explorer',
+    appName: 'Open Data Explorer',
     supportEmail: 'steve.bennett@nicta.com.au',
     baseUrl: 'build/TerriaJS',
     cesiumBaseUrl: undefined // use default
 };
 
 var configuration = {
-    bingMapsKey: undefined // use Cesium key
+    bingMapsKey: 'AiQRL12jJMMFCRI11ofGyiCj0XTPHWgBg8a9k4jxESeSd6QFRkZ0v3zMRFPsVe9L' // use Cesium key
 };
 
 
@@ -158,7 +158,7 @@ terria.start({
         elements: [
             '<a target="_blank" href="about.html">' + 
             '<img src="images/sydney-logo.png" height="50" alt="City of Sydney logo" title="Version: ' + version + '"/></a>' +
-            '<br/><span class="brand-bar-name" style="font-size:16px">Environmental Sustainability Explorer</span>',
+            '<br/><span class="brand-bar-name" style="font-size:16px">Open Data Explorer</span>',
             ''
         ]
     });

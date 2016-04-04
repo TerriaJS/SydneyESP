@@ -2,7 +2,7 @@
   "catalog": [ 
         {
           "type": "ckan",
-          "name": "Environmental Sustainability Portal",
+          "name": "City of Sydney Open Data",
           "blacklist": {
             "Rainforests (EVC_2005)": true
           },
@@ -12,15 +12,28 @@
           "filterQuery": [
             "fq=+(res_format%3awms%20OR%20res_format%3aWMS%20OR%20res_format%3acsv-geo-au%20OR%20res_format%3aCSV-GEO-AU%20OR%20res_format%3aCSV%20OR%20res_format%3aaus-geo-csv%20OR%20res_format%3acsv%20OR%20res_format%3aGeoJSON%20OR%20res_format%3aCZML%20OR%20res_format%3aczml)"
           ],
-          "url": "/",
+          "url": "http://hardworking-hartebeest-9685.vagrantshare.com",
           "includeCsv": true,
           "includeGeoJson": true,
           "includeCzml": true,
-          "isOpen": true,
+          "isOpen": false,
           "itemProperties": {
             "isOpen": true
           }
+        },
+        { "type": "group", "name": "Tests", "isOpen": true, "items": [
+        {
+            "type": "csv",
+            "name": "Region-mapped building footprints demo",
+            "url": "data/test_buildings.csv"
+        },
+        {
+            "type": "wms",
+            "name": "All buildings",
+            "url": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+            "layers": "region_map:CoS_BFP_fid"
         }
+        ]}
   ],
   "homeCamera": {
     "west": 151.1571,
