@@ -24,7 +24,7 @@ var version = require('./version');
 
 var terriaOptions = {
     appName: 'Open Data Explorer',
-    supportEmail: 'steve.bennett@nicta.com.au',
+    supportEmail: 'terriajs@lists.nicta.com.au',
     baseUrl: 'build/TerriaJS',
     cesiumBaseUrl: undefined // use default
 };
