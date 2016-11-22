@@ -1,0 +1,22 @@
+{
+    "catalog": [
+        {
+            "name": "Tests",
+            "type": "group",
+            "isOpen": true,
+            "items": [
+                {
+                    "name": "Region-mapped building footprints demo",
+                    "type": "csv",
+                    "url": "data/test_buildings.csv"
+                },
+                {
+                    "layers": "region_map:CoS_BFP_fid",
+                    "name": "All buildings",
+                    "type": "wms",
+                    "url": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows"
+                }
+            ]
+        }
+    ]
+}
