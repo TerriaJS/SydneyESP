@@ -4,7 +4,7 @@
     "PRECINCT": {
         "description": "Precincts of the City of Sydney",
         "layerName": "region_map:CoS_Village_fid",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "Name",
         "aliases": [ "precinct", "sydney_precinct", "sydneyprecinct" ],
         "serverReplacements": [ [ "[- +&_.,]+", "" ]],
@@ -13,14 +13,14 @@
     "Sydney_Village_Code": {
         "description": "Villages of the City of Sydney",
         "layerName": "region_map:CoS_Village_fid",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "Code",
         "aliases": [ "sydney_village", "sydney_village_code" ]
     },
     "Sydney_Building": {
         "description": "Villages of the City of Sydney",
         "layerName": "region_map:CoS_BFPkey_fid",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "BLDGKEY",
         "aliases": [ "sydney_building", "sydney_building_key" ],
         "comment": "Truncated with this command: ogr2ogr -f \"ESRI Shapefile\" CoS_BFPkey_fid.shp CoS_BFP_fid.shp -dialect sqlite -sql \"select FID,substr(FLOORKEY,1,8) AS BLDGKEY,* FROM CoS_BFP_fid\""
@@ -28,14 +28,14 @@
     "Sydney_Building_Floorkey": {
         "description": "Villages of the City of Sydney",
         "layerName": "region_map:CoS_BFP_fid",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "FLOORKEY",
         "aliases": [ "sydney_building_floorkey" ]
     },
     "Sydney_Transport_Zone": {
         "description": "Villages of the City of Sydney",
         "layerName": "region_map:CoS_TZ_2011_fid",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "TZ_CODE11",
         "aliases": [ "sydney_transport_zone", "sydney_tz" ]
     },
@@ -193,7 +193,7 @@
     },
     "LGA_2013": {
         "layerName": "region_map:FID_LGA_2013_AUST",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "LGA_CODE13",
         "aliases": [
             "lga_code_2013"
@@ -296,7 +296,7 @@
     },
     "CED": {
         "layerName": "region_map:FID_CED_2013_AUST",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "CED_CODE13",
         "aliases": [
             "ced_code_2013",
@@ -309,7 +309,7 @@
     },
     "CED_NAME": {
         "layerName": "region_map:FID_CED_2013_AUST",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "CED_NAME13",
         "aliases": [
             "ced_name_2013",
@@ -554,7 +554,7 @@
     },
     "TR_2013": {
       "layerName": "region_map:FID_TR_2013_AUST",
-      "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+      "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
       "regionProp": "TR_CODE13",
       "aliases": [
         "tr_code_2013",
@@ -656,7 +656,7 @@
     },
     "SLA": {
         "layerName": "region_map:fid_asgc06_sla",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "SLA_CODE06",
         "nameProp": "SLA_NAME06",
         "aliases": [
@@ -671,7 +671,7 @@
     },
     "SLA_5DIGITCODE": {
         "layerName": "region_map:fid_asgc06_sla",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "SLA_5DIGIT",
         "nameProp": "SLA_NAME06",
         "aliases": [
@@ -683,7 +683,7 @@
     },
     "SLA_NAME": {
         "layerName": "region_map:fid_asgc06_sla",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "SLA_NAME06",
         "nameProp": "SLA_NAME06",
         "aliases": [
@@ -694,7 +694,7 @@
     },
     "CD": {
         "layerName": "region_map:fid_asgc06_cd",
-        "server": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
+        "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "CD_CODE06",
         "aliases": [
             "cd_7digitcode_2006",

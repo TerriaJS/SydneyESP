@@ -16,24 +16,11 @@
           "includeCsv": true,
           "includeGeoJson": true,
           "includeCzml": true,
-          "isOpen": false,
+          "isOpen": true,
           "itemProperties": {
             "isOpen": true
           }
-        },
-        { "type": "group", "name": "Tests", "isOpen": true, "items": [
-        {
-            "type": "csv",
-            "name": "Region-mapped building footprints demo",
-            "url": "data/test_buildings.csv"
-        },
-        {
-            "type": "wms",
-            "name": "All buildings",
-            "url": "http://regionmap-dev.nationalmap.nicta.com.au/region_map/ows",
-            "layers": "region_map:CoS_BFP_fid"
         }
-        ]}
   ],
   "homeCamera": {
     "west": 151.1571,
