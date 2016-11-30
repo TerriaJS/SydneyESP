@@ -3,7 +3,7 @@
   "regionWmsMap": {
     "PRECINCT": {
         "description": "Precincts of the City of Sydney",
-        "layerName": "region_map:CoS_Village_fid",
+        "layerName": "region_map:sydney_precincts",
         "server": "http://geoserver.nationalmap.nicta.com.au/region_map/ows",
         "regionProp": "Name",
         "aliases": [ "precinct", "sydney_precinct", "sydneyprecinct" ],

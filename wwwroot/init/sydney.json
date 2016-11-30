@@ -16,7 +16,7 @@
           "includeCsv": true,
           "includeGeoJson": true,
           "includeCzml": true,
-          "isOpen": true,
+          "isOpen": false,
           "itemProperties": {
             "isOpen": true
           }
