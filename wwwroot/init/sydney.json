@@ -6,7 +6,7 @@
           "blacklist": {
             "Rainforests (EVC_2005)": true
           },
-          "groupBy": "organization",
+          "groupBy": "none",
           "minimumMaxScaleDenominator": 10000000000,
           "filterByWmsGetCapabilities": false,
           "filterQuery": [
